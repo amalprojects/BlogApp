@@ -1,0 +1,24 @@
+<!--link to get back to the dashboard-->
+<a href="/dashboard">Back</a>
+
+<!--The code below displays the heading and text box for writing a new post-->
+
+<div class="admin">
+    <h2>Add New Post</h2>
+</div>
+
+<form action="/add-post" method="POST">
+    <div>
+        <label for="title"><b>Title</b></label>
+        <input type="text" placeholder="Post Title" name="title">
+    </div>
+
+    <div class="post-content">
+        <label for="body"><b>Content</b></label>
+        <textarea name="body" cols="50" rows="10"></textarea>
+
+        <input type="submit" value="Add">
+
+    </div>
+
+</form>

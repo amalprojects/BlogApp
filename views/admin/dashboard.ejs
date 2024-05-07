@@ -1,0 +1,30 @@
+<!---Takes you to a different page to add new posts--->
+<div class="admin-title">
+    <h2>Posts</h2>
+    <a href="/add-post" class="button">+Add New</a>
+</div>
+
+<!--Dislays all your existing posts-->
+<ul class="admin-post">
+    <% data.forEach(post=>{ %>
+
+        <li>
+            <a href="/post/<%=post._id %>">
+                <%=post.title %>
+            </a>
+
+            <div- class="admin-post-control">
+                <a href="/edit-post/<%=post._id %>" class="btn">Edit</a>
+
+                <form action="/delete-post/<%=post._id%>?_method-DELETE" method="POST">
+                    <input type="submit" value="Delete" class="btn">
+                </form>
+
+                </div>
+
+        </li>
+
+
+
+        <% }) %>
+</ul>

@@ -1,0 +1,31 @@
+<div class="author">
+    <h1 class="author-heading">Hi , I am Amal</h1>
+    <p class="author-body">BLOG POST APPLICATION</p>
+</div>
+
+<img
+    src="https://images.pexels.com/photos/1907784/pexels-photo-1907784.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2">
+
+<section class="Notes">
+    <h2 class="Notes-heading">Latest Posts</h2>
+    <ul>
+        <% data.forEach(post=> { %>
+
+
+            <li>
+                <a href="/post/<%=post._id%>">
+                    <span>
+                        <%= post.title %>
+                    </span>
+                    <span class="Note-list-date">
+                        <%= post.createdAt.toDateString() %>
+                    </span>
+                </a>
+            </li>
+
+            <% }) %>
+    </ul>
+
+    <a href="#" class=pagination>View Older Posts</a>
+
+</section>
